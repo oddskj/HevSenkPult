@@ -1,0 +1,4 @@
+{
+    "board": "arduino:mbed_rp2040:pico",
+    "port": "/dev/ttyACM0"
+}

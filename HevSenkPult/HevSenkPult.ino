@@ -46,33 +46,45 @@ void loop() {
   } else if (buttonNerState == HIGH) {
       digitalWrite(nerPin, HIGH);
       digitalWrite(oppPin, LOW);
-  } else if (buttonSet1Pin == HIGH && analogState != preset1) {
+      
+  } else if (buttonSet1State == HIGH && analogState != preset1) {
       if (analogState < preset1) {
         while (analogState < preset1) {
+          analogState = analogRead(analogPin);
           digitalWrite(nerPin, LOW);
           digitalWrite(oppPin, HIGH);
+          Serial.println(analogState);
+          
         }
       } else if (analogState > preset1) {
         while (analogState > preset1) {
+          analogState = analogRead(analogPin);
           digitalWrite(oppPin, LOW);
           digitalWrite(nerPin, HIGH);
+          Serial.println(analogState);
         }
       }
-  } else if (buttonSet2Pin == HIGH && analogState != preset2) {
+  } else if (buttonSet2State == HIGH && analogState != preset2) {
       if (analogState < preset2) {
-        while (analogState < preset2) {
+        while (analogState < preset2 && buttonSet2State == HIGH) {
+          analogState = analogRead(analogPin);
           digitalWrite(nerPin, LOW);
           digitalWrite(oppPin, HIGH);
+          Serial.println(analogState);          
         }
       } else if (analogState > preset2) {
-        while (analogState > preset2) {
+        while (analogState > preset2 && buttonSet2State == HIGH) {
+          analogState = analogRead(analogPin);
           digitalWrite(oppPin, LOW);
           digitalWrite(nerPin, HIGH);
+          Serial.println(analogState);
         }
       }
   } else {
       digitalWrite(nerPin, LOW);
       digitalWrite(oppPin, LOW);
   }
+
+  Serial.println(analogState);
 
 }
