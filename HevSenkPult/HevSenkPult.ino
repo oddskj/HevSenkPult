@@ -43,21 +43,11 @@ void loop() {
   if (buttonDownState == HIGH && buttonUpState == HIGH) {
       digitalWrite(downPin, LOW);
       digitalWrite(upPin, LOW);
-      buttonDownState = digitalRead(buttonDownPin);
-      buttonUpState = digitalRead(buttonUpPin);
-      buttonSet1State = digitalRead(buttonSet1Pin);
-      buttonSet2State = digitalRead(buttonSet2Pin);
-      analogState = analogRead(analogPin);
 
   //Up signal
   } else if (buttonUpState == HIGH) {
       digitalWrite(upPin, HIGH);
       digitalWrite(downPin, LOW);
-      buttonDownState = digitalRead(buttonDownPin);
-      buttonUpState = digitalRead(buttonUpPin);
-      buttonSet1State = digitalRead(buttonSet1Pin);
-      buttonSet2State = digitalRead(buttonSet2Pin);
-      analogState = analogRead(analogPin);
 
   //Down signal
   } else if (buttonDownState == HIGH) {
@@ -132,5 +122,5 @@ void loop() {
   }
 
   Serial.println(analogState);
-
+  
 }
