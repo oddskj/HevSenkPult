@@ -122,5 +122,9 @@ void loop() {
   }
 
   Serial.println(analogState);
-  
+  funnyDelay(6.9);
+}
+
+void funnyDelay(float delay){
+  delayMicroseconds(delay * 1000);
 }
