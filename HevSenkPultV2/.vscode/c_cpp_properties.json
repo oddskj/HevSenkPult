@@ -11,6 +11,7 @@
             "includePath": [
                 "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/cores/arduino",
                 "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/variants/RASPBERRY_PI_PICO",
+                "/home/oddskj/Arduino/libraries/NewPing/src",
                 "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/cores/arduino/api/deprecated",
                 "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/cores/arduino/api/deprecated-avr-comp",
                 "/home/oddskj/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1",

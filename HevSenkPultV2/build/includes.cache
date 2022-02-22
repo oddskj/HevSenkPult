@@ -10,7 +10,17 @@
     "Includepath": "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/variants/RASPBERRY_PI_PICO"
   },
   {
-    "Sourcefile": "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/build/sketch/HevSenkPult.ino.cpp",
+    "Sourcefile": "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/build/sketch/HevSenkPultV2.ino.cpp",
+    "Include": "NewPing.h",
+    "Includepath": "/home/oddskj/Arduino/libraries/NewPing/src"
+  },
+  {
+    "Sourcefile": "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/build/sketch/HevSenkPultV2.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "/home/oddskj/Arduino/libraries/NewPing/src/NewPing.cpp",
     "Include": "",
     "Includepath": null
   }

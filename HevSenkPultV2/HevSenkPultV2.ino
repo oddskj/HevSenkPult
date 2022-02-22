@@ -1,8 +1,6 @@
-#include <eeprom.h>
-
 //Presets
-const int preset1 = 900;
-const int preset2 = 100;
+const int preset1 = 100;
+const int preset2 = 20;
 
 //Pins
 const int downPin = 0;
@@ -11,14 +9,17 @@ const int buttonDownPin = 3;
 const int buttonUpPin = 2; 
 const int buttonSet1Pin = 16;
 const int buttonSet2Pin = 17;
-const int analogPin = A2;
+const int trigPin = 4;
+const int echoPin = 5;
+long duration, cm;
+
 
 //Variables for Pins
 int buttonDownState = 0;
 int buttonUpState = 0;
 int buttonSet1State = 0;
 int buttonSet2State = 0;
-int analogState = 0;
+
 
 
 void setup() {
@@ -31,6 +32,8 @@ void setup() {
   pinMode(buttonUpPin, INPUT_PULLDOWN);
   pinMode(buttonSet1Pin, INPUT_PULLDOWN);
   pinMode(buttonSet2Pin, INPUT_PULLDOWN);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT_PULLDOWN);
 }
 
 void loop() {
@@ -39,7 +42,18 @@ void loop() {
   buttonUpState = digitalRead(buttonUpPin);
   buttonSet1State = digitalRead(buttonSet1Pin);
   buttonSet2State = digitalRead(buttonSet2Pin);
-  analogState = analogRead(analogPin);
+
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(5);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  duration = pulseIn(echoPin, HIGH);
+
+  // Distance = (traveltime/2) x speed of sound
+  // The speed of sound = 343m/s = 0.0343cm/uS = 1/29.1 cm/uS
+  cm = (duration/2) / 29.1;
+  
 
 
   if (buttonDownState == HIGH && buttonUpState == HIGH) {
@@ -59,62 +73,133 @@ void loop() {
       buttonUpState = digitalRead(buttonUpPin);
       buttonSet1State = digitalRead(buttonSet1Pin);
       buttonSet2State = digitalRead(buttonSet2Pin);
-      analogState = analogRead(analogPin);
+      
 
   //Preset 1    
-  } else if (buttonSet1State == HIGH && analogState != preset1) {
-      if (analogState < preset1) {
-        while (analogState < preset1 && buttonSet1State == HIGH) {
-          analogState = analogRead(analogPin);
+  } else if (buttonSet1State == HIGH && cm != preset1) {
+      if (cm < preset1) {
+        while (cm < preset1 && buttonSet1State == HIGH) {
+          digitalWrite(trigPin, LOW);
+          delayMicroseconds(5);
+          digitalWrite(trigPin, HIGH);
+          delayMicroseconds(10);
+          digitalWrite(trigPin, LOW);
+          duration = pulseIn(echoPin, HIGH);
+          cm = (duration/2) / 29.1;
+
           digitalWrite(downPin, LOW);
           digitalWrite(upPin, HIGH);
-          Serial.println(analogState);
+
+          Serial.println(cm);
+          
           buttonDownState = digitalRead(buttonDownPin);
           buttonUpState = digitalRead(buttonUpPin);
           buttonSet1State = digitalRead(buttonSet1Pin);
           buttonSet2State = digitalRead(buttonSet2Pin);
-          analogState = analogRead(analogPin);
+          
+          digitalWrite(trigPin, LOW);
+          delayMicroseconds(5);
+          digitalWrite(trigPin, HIGH);
+          delayMicroseconds(10);
+          digitalWrite(trigPin, LOW);
+          duration = pulseIn(echoPin, HIGH);
+          cm = (duration/2) / 29.1;
           
         }
-      } else if (analogState > preset1) {
-        while (analogState > preset1 && buttonSet1State == HIGH) {
-          analogState = analogRead(analogPin);
+      } else if (cm > preset1) {
+        while (cm > preset1 && buttonSet1State == HIGH) {
+          
+          digitalWrite(trigPin, LOW);
+          delayMicroseconds(5);
+          digitalWrite(trigPin, HIGH);
+          delayMicroseconds(10);
+          digitalWrite(trigPin, LOW);
+          duration = pulseIn(echoPin, HIGH);
+          cm = (duration/2) / 29.1;
+
           digitalWrite(upPin, LOW);
           digitalWrite(downPin, HIGH);
-          Serial.println(analogState);
+          
+          Serial.println(cm);
+          
           buttonDownState = digitalRead(buttonDownPin);
           buttonUpState = digitalRead(buttonUpPin);
           buttonSet1State = digitalRead(buttonSet1Pin);
           buttonSet2State = digitalRead(buttonSet2Pin);
-          analogState = analogRead(analogPin);
+          
+          digitalWrite(trigPin, LOW);
+          delayMicroseconds(5);
+          digitalWrite(trigPin, HIGH);
+          delayMicroseconds(10);
+          digitalWrite(trigPin, LOW);
+          duration = pulseIn(echoPin, HIGH);
+          cm = (duration/2) / 29.1;
         }
       }
   //Preset 2
-  } else if (buttonSet2State == HIGH && analogState != preset2) {
-      if (analogState < preset2) {
-        while (analogState < preset2 && buttonSet2State == HIGH) {
-          analogState = analogRead(analogPin);
+  } else if (buttonSet2State == HIGH && cm != preset2) {
+      if (cm < preset2) {
+        while (cm < preset2 && buttonSet2State == HIGH) {
+          digitalWrite(trigPin, LOW);
+          delayMicroseconds(5);
+          digitalWrite(trigPin, HIGH);
+          delayMicroseconds(10);
+          digitalWrite(trigPin, LOW);
+          duration = pulseIn(echoPin, HIGH);
+          cm = (duration/2) / 29.1;
+
           digitalWrite(downPin, LOW);
           digitalWrite(upPin, HIGH);
-          Serial.println(analogState);
+
+          digitalWrite(trigPin, LOW);
+          delayMicroseconds(5);
+          digitalWrite(trigPin, HIGH);
+          delayMicroseconds(10);
+          digitalWrite(trigPin, LOW);
+          duration = pulseIn(echoPin, HIGH);
+          cm = (duration/2) / 29.1;
+
           buttonDownState = digitalRead(buttonDownPin);
           buttonUpState = digitalRead(buttonUpPin);
           buttonSet1State = digitalRead(buttonSet1Pin);
           buttonSet2State = digitalRead(buttonSet2Pin);
-          analogState = analogRead(analogPin);          
+
+          digitalWrite(trigPin, LOW);
+          delayMicroseconds(5);
+          digitalWrite(trigPin, HIGH);
+          delayMicroseconds(10);
+          digitalWrite(trigPin, LOW);
+          duration = pulseIn(echoPin, HIGH);
+          cm = (duration/2) / 29.1;         
         }
 
-      } else if (analogState > preset2) {
-        while (analogState > preset2 && buttonSet2State == HIGH) {
-          analogState = analogRead(analogPin);
+      } else if (cm > preset2) {
+        while (cm > preset2 && buttonSet2State == HIGH) {
+          digitalWrite(trigPin, LOW);
+          delayMicroseconds(5);
+          digitalWrite(trigPin, HIGH);
+          delayMicroseconds(10);
+          digitalWrite(trigPin, LOW);
+          duration = pulseIn(echoPin, HIGH);
+          cm = (duration/2) / 29.1;
+
           digitalWrite(upPin, LOW);
           digitalWrite(downPin, HIGH);
-          Serial.println(analogState);
+
+          Serial.println(cm);
+
           buttonDownState = digitalRead(buttonDownPin);
           buttonUpState = digitalRead(buttonUpPin);
           buttonSet1State = digitalRead(buttonSet1Pin);
           buttonSet2State = digitalRead(buttonSet2Pin);
-          analogState = analogRead(analogPin);
+
+          digitalWrite(trigPin, LOW);
+          delayMicroseconds(5);
+          digitalWrite(trigPin, HIGH);
+          delayMicroseconds(10);
+          digitalWrite(trigPin, LOW);
+          duration = pulseIn(echoPin, HIGH);
+          cm = (duration/2) / 29.1;
         }
       }
 
@@ -123,7 +208,7 @@ void loop() {
       digitalWrite(upPin, LOW);
   }
 
-  Serial.println(analogState);
+  Serial.println(cm);
   funnyDelay(6.9);
 }
 
