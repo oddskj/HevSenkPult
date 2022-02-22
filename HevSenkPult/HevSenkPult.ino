@@ -1,3 +1,5 @@
+#include <eeprom.h>
+
 //Presets
 const int preset1 = 900;
 const int preset2 = 100;
