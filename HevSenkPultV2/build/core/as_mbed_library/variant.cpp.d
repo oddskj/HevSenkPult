@@ -1,2 +1,2 @@
-/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/build/core/as_mbed_library/variant.cpp.o: \
- /home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/cores/arduino/as_mbed_library/variant.cpp
+c:\Users\oddsk\GitHub\HevSenkPult\HevSenkPultV2\build\core\as_mbed_library\variant.cpp.o: \
+ C:\Users\oddsk\AppData\Local\Arduino15\packages\arduino\hardware\mbed_rp2040\2.6.1\cores\arduino\as_mbed_library\variant.cpp

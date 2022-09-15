@@ -1,6 +1,4 @@
-# 1 "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/HevSenkPultV2.ino"
-# 2 "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/HevSenkPultV2.ino" 2
-
+# 1 "c:\\Users\\oddsk\\GitHub\\HevSenkPult\\HevSenkPultV2\\HevSenkPultV2.ino"
 //Presets
 const int preset1 = 100;
 const int preset2 = 20;

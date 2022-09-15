@@ -3,26 +3,25 @@
     "configurations": [
         {
             "name": "Arduino",
-            "compilerPath": "/home/oddskj/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/bin/arm-none-eabi-g++",
+            "compilerPath": "C:\\Users\\oddsk\\AppData\\Local\\Arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\bin\\arm-none-eabi-g++",
             "compilerArgs": [
                 "-nostdlib"
             ],
             "intelliSenseMode": "gcc-x64",
             "includePath": [
-                "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/cores/arduino",
-                "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/variants/RASPBERRY_PI_PICO",
-                "/home/oddskj/Arduino/libraries/NewPing/src",
-                "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/cores/arduino/api/deprecated",
-                "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/cores/arduino/api/deprecated-avr-comp",
-                "/home/oddskj/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1",
-                "/home/oddskj/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1/arm-none-eabi",
-                "/home/oddskj/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include/c++/7.2.1/backward",
-                "/home/oddskj/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/lib/gcc/arm-none-eabi/7.2.1/include",
-                "/home/oddskj/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/lib/gcc/arm-none-eabi/7.2.1/include-fixed",
-                "/home/oddskj/.arduino15/packages/arduino/tools/arm-none-eabi-gcc/7-2017q4/arm-none-eabi/include"
+                "C:\\Users\\oddsk\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\2.6.1\\cores\\arduino",
+                "C:\\Users\\oddsk\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\2.6.1\\variants\\RASPBERRY_PI_PICO",
+                "C:\\Users\\oddsk\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\2.6.1\\cores\\arduino\\api\\deprecated",
+                "C:\\Users\\oddsk\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\2.6.1\\cores\\arduino\\api\\deprecated-avr-comp",
+                "c:\\users\\oddsk\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include\\c++\\7.2.1",
+                "c:\\users\\oddsk\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include\\c++\\7.2.1\\arm-none-eabi",
+                "c:\\users\\oddsk\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include\\c++\\7.2.1\\backward",
+                "c:\\users\\oddsk\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\lib\\gcc\\arm-none-eabi\\7.2.1\\include",
+                "c:\\users\\oddsk\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\lib\\gcc\\arm-none-eabi\\7.2.1\\include-fixed",
+                "c:\\users\\oddsk\\appdata\\local\\arduino15\\packages\\arduino\\tools\\arm-none-eabi-gcc\\7-2017q4\\arm-none-eabi\\include"
             ],
             "forcedInclude": [
-                "/home/oddskj/.arduino15/packages/arduino/hardware/mbed_rp2040/2.7.2/cores/arduino/Arduino.h"
+                "C:\\Users\\oddsk\\AppData\\Local\\Arduino15\\packages\\arduino\\hardware\\mbed_rp2040\\2.6.1\\cores\\arduino\\Arduino.h"
             ],
             "cStandard": "c11",
             "cppStandard": "c++11",

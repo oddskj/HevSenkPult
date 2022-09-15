@@ -1,7 +1,5 @@
 #include <Arduino.h>
-#line 1 "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/HevSenkPultV2.ino"
-#include <NewPing.h>
-
+#line 1 "c:\\Users\\oddsk\\GitHub\\HevSenkPult\\HevSenkPultV2\\HevSenkPultV2.ino"
 //Presets
 const int preset1 = 100;
 const int preset2 = 20;
@@ -26,13 +24,13 @@ int buttonSet2State = 0;
 
 
 
-#line 27 "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/HevSenkPultV2.ino"
+#line 25 "c:\\Users\\oddsk\\GitHub\\HevSenkPult\\HevSenkPultV2\\HevSenkPultV2.ino"
 void setup();
-#line 41 "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/HevSenkPultV2.ino"
+#line 39 "c:\\Users\\oddsk\\GitHub\\HevSenkPult\\HevSenkPultV2\\HevSenkPultV2.ino"
 void loop();
-#line 217 "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/HevSenkPultV2.ino"
+#line 215 "c:\\Users\\oddsk\\GitHub\\HevSenkPult\\HevSenkPultV2\\HevSenkPultV2.ino"
 void funnyDelay(float delay);
-#line 27 "/home/oddskj/Yeet/HevSenkPult/HevSenkPultV2/HevSenkPultV2.ino"
+#line 25 "c:\\Users\\oddsk\\GitHub\\HevSenkPult\\HevSenkPultV2\\HevSenkPultV2.ino"
 void setup() {
   
   Serial.begin(9600);
